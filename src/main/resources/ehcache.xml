@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    caching configuration
+-->
+<ehcache>
+    
+    <defaultCache
+        maxElementsInMemory="5000"
+        eternal="true"
+        overflowToDisk="false"
+        memoryStoreEvictionPolicy="LRU"
+    />
+    
+    <!--2menit-->
+    <cache name="duaMenit"
+           maxElementsInMemory="10000"
+           timeToLiveSeconds="120"
+           memoryStoreEvictionPolicy="LRU" 
+    />
+    
+    <!--1menit-->
+    <cache name="satuMenit"
+           maxElementsInMemory="10000"
+           timeToLiveSeconds="60"
+           memoryStoreEvictionPolicy="LRU" 
+    />
+</ehcache>
